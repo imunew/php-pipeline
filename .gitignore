@@ -1,0 +1,13 @@
+# Composer
+composer.lock
+/vendor/
+
+# PHPUnit
+phpunit.xml
+
+# Mac
+.DS_Store
+
+# Jet Brains
+/.idea/
+*.iml
