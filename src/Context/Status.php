@@ -33,7 +33,7 @@ class Status implements StatusInterface
      */
     public static function initialize()
     {
-        return new static(static::$INITIALIZED);
+        return new static(self::$INITIALIZED);
     }
 
     /**
@@ -41,7 +41,7 @@ class Status implements StatusInterface
      */
     public static function start()
     {
-        return new static(static::$STARTED);
+        return new static(self::$STARTED);
     }
 
     /**
@@ -49,7 +49,7 @@ class Status implements StatusInterface
      */
     public static function stop()
     {
-        return new static(static::$STOPPED);
+        return new static(self::$STOPPED);
     }
 
     /**
@@ -57,7 +57,7 @@ class Status implements StatusInterface
      */
     public function isInitialized()
     {
-        return in_array($this->status, [static::$INITIALIZED]);
+        return in_array($this->status, [self::$INITIALIZED]);
     }
 
     /**
@@ -65,7 +65,7 @@ class Status implements StatusInterface
      */
     public function isStarted()
     {
-        return in_array($this->status, [static::$STARTED]);
+        return in_array($this->status, [self::$STARTED]);
     }
 
     /**
@@ -73,6 +73,6 @@ class Status implements StatusInterface
      */
     public function isStopped()
     {
-        return in_array($this->status, [static::$STOPPED]);
+        return in_array($this->status, [self::$STOPPED]);
     }
 }
