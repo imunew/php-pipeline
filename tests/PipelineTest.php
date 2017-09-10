@@ -55,12 +55,12 @@ class PipelineTest extends TestCase
     public function processSuccessWithExtraMessagePipes()
     {
         $messages = ['This', ' is', ' the', ' open-source', ' library.'];
-        $pipes = ($this->createPipesWithMessages($messages))
-            ->add(35, function ($context) {
-                /** @var ContextInterface $context */
-                $data = $context->getData('message', '');
-                return $context->setData('message', $data. ' best');
-            });
+        $pipes = $this->createPipesWithMessages($messages);
+        $pipes = $pipes->add(35, function ($context) {
+            /** @var ContextInterface $context */
+            $data = $context->getData('message', '');
+            return $context->setData('message', $data. ' best');
+        });
 
         $pipeline = new Pipeline($pipes);
         $context = $pipeline->process(new Context());
