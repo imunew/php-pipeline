@@ -39,7 +39,7 @@ class Pipeline
 
             if (!$context instanceof ContextInterface)
             {
-                throw new RuntimeException('$context must be instance of ContextInterface.' );
+                throw new RuntimeException('$context must be instance of ContextInterface.');
             }
             if ($context->isStopped())
             {
