@@ -1,5 +1,5 @@
 {
-    "name": "imunew/php-callable-pipeline",
+    "name": "imunew/php-pipeline",
     "description": "This package provides a pipeline pattern implementation.",
     "type": "library",
     "license": "MIT",
