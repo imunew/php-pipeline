@@ -9,4 +9,11 @@ use Iterator;
  */
 interface PipesInterface extends Iterator
 {
+    /**
+     * @param int $order
+     * @param callable $pipe
+     * @return PipesInterface
+     */
+    public function add($order, callable $pipe);
+
 }

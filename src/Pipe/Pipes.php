@@ -19,9 +19,7 @@ class Pipes implements PipesInterface
     }
 
     /**
-     * @param int $order
-     * @param callable $pipe
-     * @return static
+     * {@inheritdoc}
      */
     public function add($order, callable $pipe)
     {
