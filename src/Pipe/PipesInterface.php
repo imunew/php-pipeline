@@ -16,4 +16,10 @@ interface PipesInterface extends Iterator
      */
     public function add($order, callable $pipe);
 
+    /**
+     * @param PipesInterface $pipes
+     * @return PipesInterface
+     */
+    public function merge($pipes);
+
 }
