@@ -35,6 +35,19 @@ class Pipes implements PipesInterface
     /**
      * {@inheritdoc}
      */
+    public function merge($pipes)
+    {
+        $merged = clone $this;
+        foreach ($pipes as $order => $pipe) {
+            $merged = $merged->add($order, $pipe);
+        }
+
+        return $merged;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function current()
     {
         return current($this->pipes);

@@ -10,6 +10,11 @@ This package was inspired strongly by the [League\Pipeline](http://pipeline.thep
 The `League\Pipeline` is provides only add to `pipeline`.  
 I want to insert or replace `callable` to pipeline.   
 
+## Install via composer
+```bash
+$ composer require imunew/php-pipeline
+```
+
 ## Basic usage
 
 ```php
